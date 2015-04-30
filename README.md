@@ -11,7 +11,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/tpjg/goriakpbc"
+	"github.com/renan/goriakpbc"
 )
 
 func main() {
@@ -35,15 +35,15 @@ func main() {
 ```
 
 Parts of the library are specifically designed to facilitate projects that use both Ruby and Go. See the "Document Models" below.
-To install run `go get github.com/tpjg/goriakpbc` and use import as in the example above. If the Document Models (ORM) features are not needed simply run `rm $GOPATH/src/github.com/tpjg/goriakpbc/model*.go` after `go get`.
+To install run `go get github.com/renan/goriakpbc` and use import as in the example above. If the Document Models (ORM) features are not needed simply run `rm $GOPATH/src/github.com/renan/goriakpbc/model*.go` after `go get`.
 
 ### Documentation
 
-More documentation is available in the Wiki (https://github.com/tpjg/goriakpbc/wiki), below are some examples of the features implemented in this library. Full API documentation (automatically generated including protobuf definitions) is available at http://godoc.org//github.com/tpjg/goriakpbc or through `go doc`.
+More documentation is available in the Wiki (https://github.com/renan/goriakpbc/wiki), below are some examples of the features implemented in this library. Full API documentation (automatically generated including protobuf definitions) is available at http://godoc.org//github.com/renan/goriakpbc or through `go doc`.
 
 ### Secondary indexes (2i)
 
-WARNING: The API has slightly changed and this may break existing applications. The "Indexes" are changed to store multiple values now. Please see https://github.com/tpjg/goriakpbc/issues/71 for some history and a rationale for choosing to break the API in a very clear and predictable way.
+WARNING: The API has slightly changed and this may break existing applications. The "Indexes" are changed to store multiple values now. Please see https://github.com/renan/goriakpbc/issues/71 for some history and a rationale for choosing to break the API in a very clear and predictable way.
 
 Secondary indexes are supported and can be queried for equality using IndexQuery and for a range using IndexQueryRange. Indexes must be added as strings, even when adding a "_int" index. See the example below, taken from riak_test.go:
 
@@ -141,7 +141,7 @@ if docs, err := client.Search(&Search{Q: "quake", Index: "rocket_launchers"}); e
 ```
 
 The `Search` struct has fields for row count, start, sorting, etc.  See
-http://godoc.org/github.com/tpjg/goriakpbc#Search for all of them.
+http://godoc.org/github.com/renan/goriakpbc#Search for all of them.
 
 
 ### Riak Document Models

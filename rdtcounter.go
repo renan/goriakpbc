@@ -1,7 +1,7 @@
 package riak
 
 import (
-	"github.com/tpjg/goriakpbc/pb"
+	"github.com/renan/goriakpbc/pb"
 )
 
 type RDtCounter struct {
